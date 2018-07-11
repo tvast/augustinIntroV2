@@ -2,6 +2,18 @@ body, html {
     height: 100%;
 }
 
+.bg::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  pointer-events: none;
+  mix-blend-mode: hue;
+  background: rgba(3, 230, 26, 0.2);}
+
 .bg { 
     /* The image used */
     background-image: url("gus.jpg");
@@ -14,12 +26,24 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+     position: relative;
+  -webkit-filter: contrast(95%) brightness(95%) saturate(150%) sepia(25%);
+  filter: contrast(95%) brightness(95%) saturate(150%) sepia(25%);
 }
 
+
+h1{
+	font-size: 6em;	
+} 
+
 .text {
-	top: 40%;
-	left: 40%;
+	top: 30%;
+	left: 30%;
 	position: absolute;
 	font-family: 'EB Garamond', serif;
 	color: #fff;
+	text-align: center;
+
+	width: 50%;
 }
+
